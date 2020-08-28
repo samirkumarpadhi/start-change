@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DataStructureByNarasimhan/DataStructure.iml" filepath="$PROJECT_DIR$/../DataStructureByNarasimhan/DataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ElementsOfProgramming.iml" filepath="$PROJECT_DIR$/ElementsOfProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java9-in-action-master/astro/astro.iml" filepath="$PROJECT_DIR$/../java9-in-action-master/astro/astro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java9-in-action-master/greetings/greetings.iml" filepath="$PROJECT_DIR$/../java9-in-action-master/greetings/greetings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java9-in-action-master/java9-in-action.iml" filepath="$PROJECT_DIR$/../java9-in-action-master/java9-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SimpleJava/lambdasinaction.iml" filepath="$PROJECT_DIR$/../SimpleJava/lambdasinaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ModernJavaInAction-master/modernjavainaction.iml" filepath="$PROJECT_DIR$/../ModernJavaInAction-master/modernjavainaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java9-in-action-master/stream-demo/stream-demo.iml" filepath="$PROJECT_DIR$/../java9-in-action-master/stream-demo/stream-demo.iml" />
+    </modules>
+  </component>
+</project>
