@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class PriveSieve {
+public class PrimeNumber {
 
     // @include
     // Given n, return all primes up to and including n.
