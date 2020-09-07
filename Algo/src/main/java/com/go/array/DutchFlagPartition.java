@@ -1,21 +1,16 @@
 package com.go.array;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 public class DutchFlagPartition {
     public static void dutchFlagPartition(int pivotlndex , List<Color> A) {
         Color pivot = A . get(pivotlndex) ;
-/**
-* Keep the following invariants during partitioning:
+/** Keep the following invariants during partitioning:
 * bottom group: A . subList (SI , smaller)
-                * middle group: A . subList (smaller , equal).
-.
+* middle group: A . subList (smaller , equal).
 * unclassified group: A . subList (equal , larger).
-                * top group: A . subList (larger , A . size ())
-                */
+* top group: A . subList (larger , A . size ()) */
         int smaller = 0, equal = 0, larger = A.size();
 // Keep iterating as long as there is an unclassified element.
         while (equal < larger) {
@@ -30,9 +25,6 @@ public class DutchFlagPartition {
         }
         System.out.println("pivotlndex = " + pivotlndex + ", A = " + A);
     }
-
-
-
     public static void main(String[] args) {
         List<Color> a = new ArrayList<>();
         a.add(Color.BLUE);
