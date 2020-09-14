@@ -23,7 +23,7 @@ public class PuttingIntoPractice {
         new Transaction(mario, 2012, 700),
         new Transaction(alan, 2012, 950)
     );
-
+    List<Transaction> tr2011My= transactions.stream().filter(trs->trs.getYear()==2011).sorted(comparing(Transaction::getValue)).collect(toList());
     // Query 1: Find all transactions from year 2011 and sort them by value (small to high).
     List<Transaction> tr2011 = transactions.stream()
         .filter(transaction -> transaction.getYear() == 2011)
@@ -62,7 +62,7 @@ public class PuttingIntoPractice {
 
     // Query 6: Print all transactions' values from the traders living in Cambridge.
     transactions.stream()
-        .filter(t -> "Cambridge".equals(t.getTrader().getCity()))
+        .filter(t -> "Cambridge".equals(t.getTrader().getCity()))t
         .map(Transaction::getValue)
         .forEach(System.out::println);
 

@@ -1,6 +1,7 @@
 package lambdasinaction.chap3;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class Lambdas {
 	public static void main(String ...args){
@@ -10,10 +11,19 @@ public class Lambdas {
 		r.run();
 
 		// Filtering with lambdas
-		List<Apple> inventory = Arrays.asList(new Apple(80,"green"), new Apple(155, "green"), new Apple(120, "red"));
+		List<Apple> inventory = Arrays.asList(new Apple(80,"green"),new Apple(150, "green"), new Apple(155, "green"), new Apple(120, "red"));
 
 		// [Apple{color='green', weight=80}, Apple{color='green', weight=155}]	
 		List<Apple> greenApples = filter(inventory, (Apple a) -> "green".equals(a.getColor()));
+		System.out.println(greenApples);
+		Predicate<Apple> redAppleLambda = (Apple a) -> "green".equals(a.getColor());
+		greenApples = filter(inventory, redAppleLambda);
+		System.out.println(greenApples);
+		greenApples = filter(inventory, redAppleLambda.and(a->a.getWeight()==80).or(a->a.getWeight()==150));
+		System.out.println(greenApples);
+		greenApples = filter(inventory, redAppleLambda.and(a->a.getWeight()==80));
+		System.out.println(greenApples);
+		greenApples = filter(inventory, redAppleLambda.negate());
 		System.out.println(greenApples);
 
 
@@ -32,7 +42,17 @@ public class Lambdas {
 			}
 		}
 		return result;
-	}   
+	}
+
+	public static List<Apple> filter(List<Apple> inventory, Predicate p){
+		List<Apple> result = new ArrayList<>();
+		for(Apple apple : inventory){
+			if(p.test(apple)){
+				result.add(apple);
+			}
+		}
+		return result;
+	}
 
 	public static class Apple {
 		private int weight = 0;

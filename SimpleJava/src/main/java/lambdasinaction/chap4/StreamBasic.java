@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.stream.*;
 
 import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 
 import static lambdasinaction.chap4.Dish.menu;
@@ -18,6 +19,14 @@ public class StreamBasic {
 
         // Java 8
         getLowCaloricDishesNamesInJava8(Dish.menu).forEach(System.out::println);
+        System.out.println(menu.stream().collect(groupingBy(Dish::getType)));
+        menu.stream().filter(d -> {
+            System.out.println("Filtering = " + d.getName());
+              return  d.getCalories() > 300;
+        }).map(d->{
+            System.out.println("Map "+d.getName());
+            return d.getName();
+        }).limit(4).collect(Collectors.toList()).forEach(System.out::println);
 
     }
 
