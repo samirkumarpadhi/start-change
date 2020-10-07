@@ -62,7 +62,7 @@ public class PuttingIntoPractice {
 
     // Query 6: Print all transactions' values from the traders living in Cambridge.
     transactions.stream()
-        .filter(t -> "Cambridge".equals(t.getTrader().getCity()))t
+        .filter(t -> "Cambridge".equals(t.getTrader().getCity()))
         .map(Transaction::getValue)
         .forEach(System.out::println);
 

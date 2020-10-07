@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
-import static fpij.Prices.prices;
+import static introduction.fpij.Prices.prices;
 
 public class DiscountFunctional {
   public static void main(final String[] args) {

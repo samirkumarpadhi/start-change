@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-import static fpij.Prices.prices;
+import static introduction.fpij.Prices.prices;
 
 public class DiscountImperative {
   public static void main(final String[] args) {

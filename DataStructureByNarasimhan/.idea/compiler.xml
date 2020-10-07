@@ -7,23 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lambdasinaction" />
+        <module name="functional-programming" />
         <module name="astro" />
         <module name="ElementsOfProgramming" />
+        <module name="DataStructure" />
         <module name="stream-demo" />
         <module name="greetings" />
         <module name="modernjavainaction" />
-        <module name="DataStructureByNarasimhan" />
+        <module name="Algo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="astro" target="1.9" />
-      <module name="DataStructureByNarasimhan" target="1.9" />
-      <module name="ElementsOfProgramming" target="1.9" />
-      <module name="greetings" target="1.9" />
-      <module name="java9-in-action" target="1.9" />
-      <module name="lambdasinaction" target="1.9" />
-      <module name="modernjavainaction" target="10" />
-      <module name="stream-demo" target="1.9" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Algo" options="-parameters" />
+    </option>
   </component>
 </project>
