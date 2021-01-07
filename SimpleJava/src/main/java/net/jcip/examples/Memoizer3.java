@@ -3,13 +3,6 @@ package net.jcip.examples;
 import java.util.*;
 import java.util.concurrent.*;
 
-/**
- * Memoizer3
- * <p/>
- * Memoizing wrapper using FutureTask
- *
- * @author Brian Goetz and Tim Peierls
- */
 public class Memoizer3 <A, V> implements Computable<A, V> {
     private final Map<A, Future<V>> cache
             = new ConcurrentHashMap<A, Future<V>>();
