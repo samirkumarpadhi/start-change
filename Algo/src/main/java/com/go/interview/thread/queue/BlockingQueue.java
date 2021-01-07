@@ -4,10 +4,14 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 public class BlockingQueue {
     public static void main(String[] args) {
-        java.util.concurrent.BlockingQueue<Integer> blockQueue = new ArrayBlockingQueue<>(10);
+        java.util.concurrent.BlockingQueue<Double> blockQueue = new ArrayBlockingQueue<>(10);
         Runnable producer = () -> {
             while(true) {
-                blockQueue.put(Math.random());
+                try {
+                    blockQueue.put(Math.random());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         };
         new Thread(producer).start();
@@ -15,12 +19,20 @@ public class BlockingQueue {
 
         Runnable consumer = () -> {
             while(true) {
-                blockQueue.take();
+                try {
+                    blockQueue.take();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
+        };
+        new Thread(consumer).start();
+        new Thread(consumer).start();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        new Thread(consumer).start();
-        new Thread(consumer).start();
-        Thread.sleep(1000);
 
     }
 }
