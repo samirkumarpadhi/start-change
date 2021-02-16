@@ -55,7 +55,7 @@ public class PrimeNumber {
     }
 
     public static void main(String[] args) {
-       // System.out.println("A = " + generatePrimes(10));
+       //System.out.println("A = " + generatePrimes(10));
         System.out.println("A = " + generatePrimes2(100));
     }
 

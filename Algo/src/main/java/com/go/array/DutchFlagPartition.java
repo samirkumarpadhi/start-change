@@ -33,7 +33,7 @@ public class DutchFlagPartition {
         a.add(Color.WHITE);
         a.add(Color.RED);
         a.add(Color.WHITE);a.add(Color.RED);a.add(Color.RED);a.add(Color.BLUE);a.add(Color.RED);a.add(Color.BLUE);a.add(Color.RED);
-        DutchFlagPartition.dutchFlagPartition(1,a);
+        DutchFlagPartition.dutchFlagPartition(2,a);
     }
 //{"5","8","8","5","7","2","8","5"}
 }
