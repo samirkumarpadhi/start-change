@@ -5,10 +5,11 @@ public class Reverse {
         long result = 0;
         long xRemaining = Math.abs(x);
         while (xRemaining != 0) {
-            System.out.println("result = " + result);
-            System.out.println("xRemaining = " + xRemaining);
+
             result = result * 10 + xRemaining % 10;
             xRemaining /= 10;
+            System.out.println("result = " + result);
+            System.out.println("xRemaining = " + xRemaining);
 
         }
         return x < 0 ? -result : result;
